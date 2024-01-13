@@ -19,8 +19,7 @@ import { HiDotsVertical } from "react-icons/hi";
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { MapContainer, TileLayer, useMapEvents } from 'react-leaflet';
-import MapComponent from "./Map";
-import MapWithMarker from "./Map";
+import { onSnapshot } from "firebase/firestore";
 
 function App() {
   //Edit Modal 
@@ -181,7 +180,7 @@ function App() {
       setVal(dbValues.docs.map(doc => ({ ...doc.data(), id: doc.id })))
     }
     getData();
-  }, [value])
+  }, [])
 
 
 
@@ -229,8 +228,7 @@ function App() {
   //Show Map InPage
 
 
-  const [lat ,setLat] = useState('');
-  const [lng ,setLang] = useState('');
+
 
   return (
     <div className="App font">
@@ -241,8 +239,9 @@ function App() {
 
 
         {/* Map To Show Location Shops */}
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.3321794215653!2d-122.00639707560632!3d37.3346437720996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb596e9e188fd%3A0x3b0d8391510688f0!2sApple%20Park!5e0!3m2!1sar!2seg!4v1705170617655!5m2!1sar!2seg" width="100%" height="450"  loading="lazy" ></iframe>
-
+          <div style={{margin:"25px auto"}}>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7292975.940161653!2d36.170930948607705!3d26.807383271929748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14368976c35c36e9%3A0x2c45a00925c4c444!2z2YXYtdix!5e0!3m2!1sar!2seg!4v1705178357815!5m2!1sar!2seg" width="98%" style={{margin:"auto"}} height="450"  loading="lazy" ></iframe>
+          </div>
         {/* Map To Show Location Shops */}
 
 
