@@ -356,13 +356,13 @@ function App() {
             Edit Shop
           </Typography>
           <div style={{ height: '500px', width: '100%', overflow: 'hidden' }}>
-            {/* <MapContainer center={[24.7136, 46.6753]} zoom={10} style={{ height: '100%' }}>
+            <MapContainer center={[24.7136, 46.6753]} zoom={10} style={{ height: '100%' }}>
               <TileLayer
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               />
               <ClickHandler onClick={edithandleClick} />
-            </MapContainer> */}
+            </MapContainer>
           </div>
           <Typography id="modal-edit-description" style={{ margin: "30px auto", textAlign: "center" }}>
             <FormControl>
